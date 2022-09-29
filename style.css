@@ -1,0 +1,30 @@
+.video1{
+    text-align: left;
+}
+.heading1{
+    text-align: center;
+}
+.heading2{
+    text-align: center;
+    background-color: rgb(241, 115, 115);
+}
+
+.image1{
+    text-align: center;
+}
+.reference1{
+    text-align: center;
+}
+.prathu{
+    outline-offset: 5px;
+border-style:ridge dashed dotted solid;
+box-shadow: 18px 19px 20px lightcoral;
+border-color: red rgb(18, 18, 20) green pink;
+border-radius: 10px 15px 25px 30px;
+border-width: 5px;
+background-color: rgb(215, 209, 221);
+padding: 10px;
+margin: 15px;
+margin-right: 30px;
+text-shadow: 1px 2px 3px rgb(17, 17, 129);
+}

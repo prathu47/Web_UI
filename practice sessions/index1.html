@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+        .sign{
+            text-align: right;
+        }
+       
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float Property</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .parent{
+            /* width:100%; */
+            margin: 20px;
+            overflow: hidden;
+            float:center;
+            border-radius: 15px;
+            border-style: inset;
+            
+        }
+        .header{
+            text-align: center;
+            border-radius:15px;
+            background-color: burlywood;
+            border:2px solid brown;
+            color:rgb(31, 8, 8);
+            padding: 5px;
+        }
+        .left{
+            width: 20%;
+            height:600px;
+            border-radius: 15px;
+            background-color: cornflowerblue;
+            border:3px solid rgb(96, 6, 89);
+            float:left;
+        }
+        .center{
+            width: 50%;
+            height:600px; 
+            background-color: rgb(229, 181, 243);
+            border:2px solid darkblue;
+            float:left;
+            border-radius: 15px;
+            padding: 5px;
+        }
+        .right{
+            width: 30%;
+            height:600px; 
+           border-radius: 15px;
+            background-color: rgb(166, 236, 161);
+            border:2px solid rgb(4, 63, 25);
+            float:left;
+            padding: 5px;
+        }
+        .footer{
+            text-align: center;
+            margin-bottom: 100px;
+            background-color: burlywood;
+            border:2px solid brown;
+            color:rgb(3, 3, 3);
+            padding: 20px;
+        }
+        .vertical{
+            list-style-type: none;
+            margin:0;
+            margin-top: 20px;
+            padding:10px;
+            width:200px;
+            position:sticky;
+            overflow:auto;
+            height:100%;
+            display: flex;
+    flex-direction: column;
+        }
+        li a.verticalnav{
+            display:block;
+            color:darkblue;
+            text-align: left;
+            padding: 5px 5px;
+            text-decoration: none;
+            font-size: larger;
+            width: 140px;
+            height: 100%;
+        }
+        }
+        li a.verticalnav:hover{
+            background-color: aquamarine;
+        }
+        
+        #active{
+            background-color: blueviolet;
+        }
+
+        p::first-letter{
+            color:rgb(41, 2, 2);
+            font-size: 25px;
+            font-weight: bold;
+        }
+        p::first-line{
+            color:rgb(88, 88, 100);
+        }
+        p::selection{
+            color:rgb(9, 9, 15);
+            background-color: aquamarine;
+        }
+        ::marker{
+            color:chartreuse;
+        }
+        body{
+            background-image: url("Assets/bg1.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .transition{
+            width:100px;
+            height:100px;
+            transition: width 2s,height 2s, transform 1s;
+        }
+        .transition:hover{
+            width:300px;
+            height:200px;
+            transform:rotate(360deg);
+        }
+
+       
+        .nav{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+li a.active {
+  color: white;
+  background-color: #04AA6D;
+ }
+ /* @media only screen and (max-width:1000px)
+        {
+            iframe{
+               
+                width:100%;
+            }
+            li a.verticalnav{
+            display:block;
+            color:rgb(139, 0, 139);
+            text-align: left;
+            padding: 5px 5px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        p{
+            font-size: 12px;
+        }
+        img{
+            display: none;
+        }
+        
+        }
+        @media only screen and (max-width:800px)
+        {
+            iframe{
+                
+                width:100%;
+            }
+            li a.verticalnav{
+            display:block;
+            color:rgb(0, 139, 7);
+            text-align: left;
+            padding: 5px 5px;
+            text-decoration: none;
+            font-size: 10px;
+        }
+        p{
+            font-size: 10px;
+        }
+        .media{
+            display:none;
+        }
+        img{
+            display: none;
+        }
+        
+        }
+        }  */
+        @media only screen and (max-width: 800px)
+        {
+            .left,.center,.right{
+                width: 100%;
+            }
+            iframe{
+                height: 500px;
+            }
+            .ui{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+            iframe{
+                /* height:50px; */
+                width:100%;
+            }
+            li a.verticalnav{
+            display:block;
+            color:rgb(139, 0, 0);
+            text-align: left;
+            padding: 5px 5px;
+            text-decoration: none;
+            /* font-size: 8px; */
+            width: 100%;
+        }
+        /* p{
+            font-size: 8px; */
+        
+        .media{
+            display:none;
+        }
+        img{
+            display: none;
+        }
+        }
+        .ui{
+            display: flex;
+            align-items: center;
+        }
+   
+</style>
+</head>
+<body>
+    <ul class="nav">
+        <li><a class="active" href="index1.html">Home</a></li>
+        <li><a href="form1.html">Sign up</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    <!-- <link rel="formsheet" href="form1.html">
+    <link rel="formsheet" href="index.html"> -->
+ <div class="parent">
+        <div class="header">
+            <h2>DLithe Bootcamp</h2>
+        </div>
+        <br>
+        <div>
+        <div class="ui">
+            
+            <!--Vertical Navigation-->
+            <div class="left">
+                <ul class="vertical">
+                    <li><a id="active" class="verticalnav" href="list.html" target="_blank">List of Courses</a></li>
+                    <li><a class="verticalnav" href="form1.html" target="_blank">HTML</a></li><br>
+                    <li><a class="verticalnav" href="selectors.html" target="_blank">CSS</a></li><br>
+                    <li><a class="verticalnav"href="javascript.html" target="_blank">javascript</a></li><br>
+                    <li><a class="verticalnav">Bootstrap</a></li><br>
+                    <li><a class="verticalnav">Angular</a></li><br>
+                    <li><a class="verticalnav">Database</a></li>
+                    <li><a class="verticalnav">CSS Media Queries</a></li>
+                </ul>
+            </div>
+            
+            <!--float property with a image-->
+            <div class="center">
+                <p><img class="media" src="Assets/dlithe1.png" alt="HTML" height="100px" width="100px">Welcome To DLithe, We are the people from Industry.We have experience working with customers globally to achieve their business goals. We have worked with large enterprise engagements in various domains like Retail, Manufacturing, Banking & Finance, Insurance, etc.. using various technologies like Java, Microsoft, Python, AI, IoT and many more…Legacy to Modern Technology, we understand your needs. We are committed to giving you positive results</p><hr>
+                
+                <p><img class="media" src="Assets/dlithe1.png" alt="HTML" height="100px" width="100px" style="float:right">Welcome To DLithe, We are the people from Industry.We have experience working with customers globally to achieve their business goals. We have worked with large enterprise engagements in various domains like Retail, Manufacturing, Banking & Finance, Insurance, etc.. using various technologies like Java, Microsoft, Python, AI, IoT and many more…Legacy to Modern Technology, we understand your needs. We are committed to giving you positive results</p><br>
+            </div>
+            <div class="right">
+                <iframe width="100%" height="70%" src="Assets\videoplayback.mp4">
+                </iframe>
+                <audio controls autoplay muted>
+                    <source src="Assets/price-of-freedom-33106.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </div>
+        <br>
+        
+    </div> 
+    <div class="footer">
+        <h2>&copy; www.DLithetraining.com</h2>
+        <img class="transition" src="assets/dlithe1.png" height="100px" width="100px" alt="CSS" >            
+    </div>   
+</body>
+</html>
